@@ -6,7 +6,7 @@ defmodule Chop do
 
   defp _guess(n, c, range) when c < n  do
     a..b = range
-    nc = div(b+a, 2)
+    nc = div(b+c, 2)
     IO.puts "Guessing #{nc} lower"
 
     _guess(n, nc, c..b)
@@ -14,9 +14,9 @@ defmodule Chop do
 
   defp _guess(n, c, range) when c > n  do
     a..b = range
-    nc = div(b+a, 2)
+    nc = div(c+a, 2)
 
-    IO.puts "Guessing #{nc} higher"
+    IO.puts "Guessing #{nc} higher c is #{c}"
     _guess(n, nc, a..c)
   end
 
