@@ -8,9 +8,9 @@
             "type": "mix_task",
             "request": "launch",
             "name": "mix task",
-            "task": "task",
+            "task": "run",
             "taskArgs": [],
-            "projectDir": "${workspaceRoot}"
+            "projectDir": "${workspaceRoot}/Ch13/issues"
         },
         {
             "type": "mix_task",
@@ -21,7 +21,7 @@
                 "--trace"
             ],
             "startApps": true,
-            "projectDir": "${workspaceRoot}",
+            "projectDir": "${workspaceRoot}/Ch13/issues",
             "requireFiles": [
                 "test/**/test_helper.exs",
                 "test/**/*_test.exs"
