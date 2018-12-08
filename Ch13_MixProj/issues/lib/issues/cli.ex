@@ -26,6 +26,7 @@ defmodule Issues.CLI do
   end
 
   defp process(:help) do
+
     IO.puts("""
       usage: TODO
     """)
