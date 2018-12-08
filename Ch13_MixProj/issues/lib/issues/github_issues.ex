@@ -7,6 +7,7 @@ defmodule Issues.GithubIssues do
   def fetch(user, project) do
     Logger.info("Fetching #{user}'s project #{project} -> ")
     Logger.debug(fn -> inspect(issues_url(user, project)) end)
+
     issues_url(user, project)
     |> HTTPoison.get(@user_agent)
     |> handle_response
@@ -21,8 +22,8 @@ defmodule Issues.GithubIssues do
     Logger.debug(fn -> inspect(body) end)
 
     {
-       status_code |> check_for_error(),
-       body |> Poison.Parser.parse!()
+      status_code |> check_for_error(),
+      body |> Poison.Parser.parse!()
     }
   end
 

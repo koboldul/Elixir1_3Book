@@ -21,10 +21,10 @@ defmodule CliTest do
     result = sort_into_desc_order(fake_create_issues(["a", "c", "b"]))
     issues = for issue <- result, do: Map.get(issue, "created_at")
 
-    assert issues ==~w{c b a}
+    assert issues == ~w{c b a}
   end
 
   defp fake_create_issues(values) do
-    Enum.map(values, &(%{"created_at"=>&1, other_data: "xxx"}))
+    Enum.map(values, &%{"created_at" => &1, other_data: "xxx"})
   end
 end

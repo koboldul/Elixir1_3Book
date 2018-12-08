@@ -18,7 +18,7 @@ defmodule Issues.CLI do
   end
 
   defp args_repr([user, project]) do
-    {user, project, @default_count  }
+    {user, project, @default_count}
   end
 
   defp args_repr(_) do
@@ -26,9 +26,9 @@ defmodule Issues.CLI do
   end
 
   defp process(:help) do
-    IO.puts """
+    IO.puts("""
       usage: TODO
-    """
+    """)
 
     System.halt(0)
   end
@@ -44,7 +44,7 @@ defmodule Issues.CLI do
   def decode_response({:ok, body}), do: body
 
   def decode_response({:error, error}) do
-    IO.puts "Error fetching from github #{error["message"]}"
+    IO.puts("Error fetching from github #{error["message"]}")
     System.halt(2)
   end
 
@@ -60,6 +60,4 @@ defmodule Issues.CLI do
       i1["created_at"] >= i2["created_at"]
     end)
   end
-
-
 end

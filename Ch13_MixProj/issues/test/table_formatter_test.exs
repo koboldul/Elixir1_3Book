@@ -1,4 +1,4 @@
-defmodule TableFormatterTest  do
+defmodule TableFormatterTest do
   use ExUnit.Case
   import ExUnit.CaptureIO
 
@@ -16,11 +16,11 @@ defmodule TableFormatterTest  do
   test "width get" do
     TF.split_into_cols(@sample_data, @headers)
     |> TF.widths_of()
-    |> Enum.each(&(IO.puts &1))
+    |> Enum.each(&IO.puts(&1))
   end
 
   test "all shabable" do
-    result = capture_io (fn -> TF.print_as_table_with_cols(@sample_data, @headers) end)
+    result = capture_io(fn -> TF.print_as_table_with_cols(@sample_data, @headers) end)
 
     # assert result == """
     # c1    | c2     | c4​​ 
