@@ -10,7 +10,7 @@
             "name": "mix task",
             "task": "run",
             "taskArgs": [],
-            "projectDir": "${workspaceRoot}/Ch13/issues"
+            "projectDir": "${workspaceRoot}/Ch19_Duper/duper"
         },
         {
             "type": "mix_task",
